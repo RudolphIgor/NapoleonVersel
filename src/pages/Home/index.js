@@ -8,7 +8,7 @@ import Section5 from "../../components/Section5";
 const Index = () => {
     return (
         <div>
-            DEV
+            DEVELOP
             <Section1/>
             <Section2/>
             <Section3/>
