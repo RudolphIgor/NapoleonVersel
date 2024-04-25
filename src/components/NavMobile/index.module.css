@@ -1,0 +1,43 @@
+.burger {
+    display: none;
+}
+
+.menuMobile {
+    width: 100%;
+    height: 100%;
+    background: #303030;
+    position: absolute;
+
+    left: 0;
+    z-index: 3;
+    padding: 30px 0 0 0 ;
+}
+
+.nav_list {
+    color: red;
+}
+.nav__item {
+    color: red;
+    display: block;
+    text-transform: uppercase;
+}
+
+.nav__item:not(:last-child) {
+    margin: 0 0 15px 0;
+    /*color: green;*/
+}
+
+
+
+@media (max-width: 992px) {
+    .burger {
+        display: block;
+        margin: 0 0 0 auto;
+        align-content: center;
+
+
+    }
+    .menuMobile {
+        top: clamp(75px, 13.7096774194vw, 136px) ;
+    }
+}

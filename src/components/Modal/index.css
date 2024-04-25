@@ -1,0 +1,61 @@
+.modal {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.modalContent {
+    padding: clamp(10px, 2.2vw, 20px);
+    background-color: #303030;
+    width: 672px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.modalCloseButton {
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    width: 15px;
+    height: 21px;
+    background: none;
+}
+
+/* open */
+
+.modal--entering,
+.modal--entered {
+    opacity: 1;
+}
+
+.modal--entering .modalContent,
+.modal--entered .modalContent {
+    transform: scale(1);
+}
+
+/* close */
+
+.modal--exiting,
+.modal--exited {
+    /*opacity: 0;*/
+}
+
+.modal--exiting .modalContent,
+.modal--exited .modalContent {
+    transform: scale(0);
+}
+
+@media (max-width: 750px) {
+    .modalContent{
+        width: 89.6%;
+    }
+}

@@ -1,0 +1,42 @@
+.cardBody {
+    background: #fff;
+    /*width: 266px;*/
+    width: 100%;
+    padding: 4px 4px 39px 4px;
+    color: #1B1918;
+}
+.wrapper {
+    width: 234px;
+    margin: 0 auto;
+}
+
+.image {
+    width: 100%;
+    margin-bottom: 15px;
+    height: 140px;
+}
+
+.title {
+    font-family: Ubuntu, "sans-serif";
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.label {
+    color: #fff;
+    background: #E30016;
+    padding: 4px 14px;
+    box-shadow:  4px 4px 4px 0 rgba(0,0,0,0.25);
+    font-size: 10px;
+    font-weight: 400;
+    font-feature-settings: 'locl' 0;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.text {
+    color: #353434;
+    font-size: 10px;
+    line-height: 156.5%;
+}

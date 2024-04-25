@@ -1,0 +1,36 @@
+.categoryCard {
+    background: #fff;
+    font-family: "Sofia Sans";
+    font-feature-settings: 'locl' 0;
+    color:#3D0000 ;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-top: min(1.08333333333vw, 13px);
+    padding-right: min(1.08333333333vw, 13px);
+    padding-left: min(1.08333333333vw, 13px);
+    padding-bottom: min(1.9166666667vw, 23px);
+    width: 100%;
+}
+
+.cardLabel {
+    font-size: 30px;
+}
+.imgCatalog {
+    width: 100%;
+    margin-bottom: 23px;
+}
+
+@media (max-width: 1200px) {
+    .cardLabel {
+        font-size: clamp(25px, 2.5vw, 30px);
+    }
+    .imgCatalog {
+        margin-bottom: clamp(7px, 1.9166666667vw, 23px);
+    }
+}
+
+@media (max-width: 996px) {
+    .cardLabel {
+        font-size: clamp(17px, 2.4vw, 24px);
+    }
+}

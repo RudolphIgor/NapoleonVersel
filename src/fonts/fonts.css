@@ -1,0 +1,56 @@
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Sofia Sans';
+    src: url('SofiaSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Sofia Sans';
+    src: url('SofiaSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Sofia Sans';
+    src: url('SofiaSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+}

@@ -1,0 +1,31 @@
+.container {
+    margin: 0 auto;
+    width: min(90%, 1200px);
+}
+
+.section {
+    margin-bottom: 60px;
+}
+.sectionTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+    .section {
+        margin-bottom: clamp(30px, 5.4166vw, 60px)
+    }
+    .sectionTitle {
+        font-size: clamp(20px, 2.5vw, 30px);
+        margin-bottom: clamp(15px, 4.1666666667vw, 50px);
+    }
+}
+
