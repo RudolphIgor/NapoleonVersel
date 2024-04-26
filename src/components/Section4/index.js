@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import clsx from "clsx";
 import {Autoplay, EffectFade} from 'swiper/modules';
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -9,9 +9,12 @@ import Promotion from "../Promotion";
 import style from "./insex.module.css"
 import {register} from 'swiper/element/bundle'
 import {promotions} from "../../data/promotions";
+import Modal from "../Modal";
 
 
 const Index = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     const swiperRef = useRef(null);
     useEffect(() => {
         register();
@@ -97,6 +100,7 @@ const Index = () => {
         swiperRef.current.initialize();
     }, []);
     return (
+        <>
         <section className={clsx('container', 'section')} id="section4">
             <h2 className={clsx('sectionTitle')}>
                 акции
@@ -114,7 +118,11 @@ const Index = () => {
                     {
                         promotions.map(promotionItem => {
                             return (
-                                <swiper-slide key={promotionItem.id}>
+                                <swiper-slide key={promotionItem.id}
+                                onClick={()=>{
+                                    setIsOpen(true)
+                                }}
+                                >
                                     <Promotion promo={promotionItem}/>
                                 </swiper-slide>
                             )
@@ -124,8 +132,14 @@ const Index = () => {
 
                 </swiper-container>
             </div>
-
+            <Modal
+                isOpen={isOpen} //передача состояния окна
+                onClose={() => setIsOpen(false)}
+            >
+                Hi
+            </Modal>
         </section>
+        </>
     );
 };
 
