@@ -34,6 +34,7 @@ const Index = (props) => {
                 onClose={() => setIsOpen(false)}
                 sendResult={sendResult}//"обратная" функция вызываемая по onClose из компонента, но срабатывающая здесь
             >
+                <div className={clsx(style.wrapperForm)}>
                 <div className={clsx(style.form)}>
                     <h3 className={clsx(style.formTitle)}>
                         Заказать звонок
@@ -80,6 +81,7 @@ const Index = (props) => {
 
                     </form>
 
+                </div>
                 </div>
             </Modal>
         </>

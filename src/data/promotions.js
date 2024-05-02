@@ -14,11 +14,14 @@ export const promotions = [
                     "Class" : 2
                 }
             },
-            // {
-            //     id: 2,
-            //     title: "Товар №2",
-            //     specifications: "dfd"
-            // }
+            {
+                id: 2,
+                title: "Товар №2",
+                specifications: {
+                    "Country": "Europe",
+                    "Class" : 1
+                }
+            }
         ]
     },
     {

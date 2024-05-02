@@ -141,22 +141,21 @@ const Index = () => {
                 <Modal
                     isOpen={isOpen} //передача состояния окна
                     onClose={() => setIsOpen(false)}
+                    className={clsx(style.modal)}
                 >
-                    <h1>
+
                         {
                             promotions.map(promotionItem => {
                                 if (promotionItem.id === promotionId) {
                                     return(
-                                        <h1>{promotionItem.title}</h1>
+                                        <img src={promotionItem.image} className={clsx(style.imagePromo)} alt=""  />
                                     )
                                 }
-
                             })
 
                         }
-                    </h1>
-                    {
 
+                    {
                         promotions.map(promotionItem => {
                             console.log(promotionItem);
                             if (promotionItem.id === promotionId) {

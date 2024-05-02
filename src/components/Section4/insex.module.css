@@ -1,3 +1,10 @@
+.modal {
+    padding: 0 !important;
+}
 .wrapper {
     display: block;
+}
+
+.imagePromo{
+    width: 100%;
 }
