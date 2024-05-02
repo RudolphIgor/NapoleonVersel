@@ -9,17 +9,19 @@ export const promotions = [
             {
                 id: 1,
                 title: "Товар №1",
+                image: "./img/promotions/promodet1.jpg",
                 specifications: {
                     "Country": "Russia",
-                    "Class" : 2
+                    "Class": 2
                 }
             },
             {
                 id: 2,
                 title: "Товар №2",
+                image: "./img/promotions/promodet2.jpg",
                 specifications: {
                     "Country": "Europe",
-                    "Class" : 1
+                    "Class": 1
                 }
             }
         ]

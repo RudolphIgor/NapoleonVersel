@@ -14,8 +14,6 @@
 
 
 .modalContent {
-    /*padding: clamp(10px, 2.2vw, 20px);*/
-    background-color: #303030;
     width: 672px;
     position: relative;
     transition: transform 0.3s;

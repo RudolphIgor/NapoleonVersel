@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay'
 import Promotion from "../Promotion";
-import style from "./insex.module.css"
+import style from "./index.module.css"
 import {register} from 'swiper/element/bundle'
 import {promotions} from "../../data/promotions";
 import Modal from "../Modal";
@@ -125,8 +125,6 @@ const Index = () => {
                                         onClick={() => {
                                             setIsOpen(true)
                                             setPromotionId(promotionItem.id)
-
-                                            // console.log(promotionId)
                                         }}
                                     >
                                         <Promotion promo={promotionItem}/>
@@ -143,48 +141,51 @@ const Index = () => {
                     onClose={() => setIsOpen(false)}
                     className={clsx(style.modal)}
                 >
-
+                    <div className={clsx(style.wrapperPromo)}>
                         {
                             promotions.map(promotionItem => {
                                 if (promotionItem.id === promotionId) {
-                                    return(
-                                        <img src={promotionItem.image} className={clsx(style.imagePromo)} alt=""  />
+                                    return (
+                                        <div>
+                                            <img src={promotionItem.image} className={clsx(style.imagePromo)} alt=""/>
+                                            <h2 className={clsx(style.titlePromo)}>
+                                                {promotionItem.title}
+                                            </h2>
+                                        </div>
                                     )
                                 }
                             })
-
                         }
+                        {
+                            promotions.map(promotionItem => {
+                                console.log(promotionItem);
+                                if (promotionItem.id === promotionId) {
+                                    console.log(promotionId)
+                                    return (
+                                        promotionItem.details.map(detail => {
 
-                    {
-                        promotions.map(promotionItem => {
-                            console.log(promotionItem);
-                            if (promotionItem.id === promotionId) {
-                                console.log(promotionId)
-                                return (
+                                            console.log(Object.keys(detail.specifications))
+                                            console.log(Object.values(detail.specifications))
+                                            return (
 
-                                    promotionItem.details.map(detail => {
-                                        console.log(Object.keys(detail.specifications))
-                                        console.log(Object.values(detail.specifications))
+                                                Object.entries(detail.specifications).map(([key, value]) => {
+                                                    return (
+                                                        <div>
+                                                            <span>{key} : </span>
+                                                            <span>{value}</span>
+                                                        </div>
 
-                                        return (
+                                                    )
+                                                })
 
-                                            Object.entries(detail.specifications).map(([key,value]) => {
-                                                return (
-                                                    <div>
-                                                        <span>{key} : </span>
-                                                        <span>{value}</span>
-                                                    </div>
+                                            )
 
-                                                )
-                                            })
-
-                                        )
-
-                                    })
-                                )
-                            }
-                        })
-                    }
+                                        })
+                                    )
+                                }
+                            })
+                        }
+                    </div>
                 </Modal>
             </section>
         </>

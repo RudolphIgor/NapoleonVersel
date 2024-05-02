@@ -70,6 +70,7 @@
 /*Для формы отправки*/
 .wrapperForm {
     padding: clamp(10px, 2.2vw, 20px);
+    background: #303030;
 }
 .formTitle {
     margin: 0 0 40px 0;
