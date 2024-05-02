@@ -14,6 +14,8 @@ import Modal from "../Modal";
 
 const Index = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [promotionId, setPromotionId] = useState(null);
+
 
     const swiperRef = useRef(null);
     useEffect(() => {
@@ -101,44 +103,91 @@ const Index = () => {
     }, []);
     return (
         <>
-        <section className={clsx('container', 'section')} id="section4">
-            <h2 className={clsx('sectionTitle')}>
-                акции
-            </h2>
-            <div className={clsx(style.wrapper)}>
-                <swiper-container init="false" ref={swiperRef}
-                    // slides-per-view="4"
-                    // autoplay="true"
-                                  speed="2000"
-                                  loop="true"
-                    // pagination="true"
+            <section className={clsx('container', 'section')} id="section4">
+                <h2 className={clsx('sectionTitle')}>
+                    акции
+                </h2>
+                <div className={clsx(style.wrapper)}>
+                    <swiper-container init="false" ref={swiperRef}
+                        // slides-per-view="4"
+                        // autoplay="true"
+                                      speed="2000"
+                                      loop="true"
+                        // pagination="true"
 
-                    // space-between="30"
+                        // space-between="30"
+                    >
+                        {
+                            promotions.map(promotionItem => {
+                                return (
+                                    <swiper-slide
+                                        key={promotionItem.id}
+                                        onClick={() => {
+                                            setIsOpen(true)
+                                            setPromotionId(promotionItem.id)
+
+                                            // console.log(promotionId)
+                                        }}
+                                    >
+                                        <Promotion promo={promotionItem}/>
+                                    </swiper-slide>
+                                )
+                            })
+                        }
+
+
+                    </swiper-container>
+                </div>
+                <Modal
+                    isOpen={isOpen} //передача состояния окна
+                    onClose={() => setIsOpen(false)}
                 >
+                    <h1>
+                        {
+                            promotions.map(promotionItem => {
+                                if (promotionItem.id === promotionId) {
+                                    return(
+                                        <h1>{promotionItem.title}</h1>
+                                    )
+                                }
+
+                            })
+
+                        }
+                    </h1>
                     {
+
                         promotions.map(promotionItem => {
-                            return (
-                                <swiper-slide key={promotionItem.id}
-                                onClick={()=>{
-                                    setIsOpen(true)
-                                }}
-                                >
-                                    <Promotion promo={promotionItem}/>
-                                </swiper-slide>
-                            )
+                            console.log(promotionItem);
+                            if (promotionItem.id === promotionId) {
+                                console.log(promotionId)
+                                return (
+
+                                    promotionItem.details.map(detail => {
+                                        console.log(Object.keys(detail.specifications))
+                                        console.log(Object.values(detail.specifications))
+
+                                        return (
+
+                                            Object.entries(detail.specifications).map(([key,value]) => {
+                                                return (
+                                                    <div>
+                                                        <span>{key} : </span>
+                                                        <span>{value}</span>
+                                                    </div>
+
+                                                )
+                                            })
+
+                                        )
+
+                                    })
+                                )
+                            }
                         })
                     }
-
-
-                </swiper-container>
-            </div>
-            <Modal
-                isOpen={isOpen} //передача состояния окна
-                onClose={() => setIsOpen(false)}
-            >
-                Hi
-            </Modal>
-        </section>
+                </Modal>
+            </section>
         </>
     );
 };

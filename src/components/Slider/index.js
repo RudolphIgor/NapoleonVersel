@@ -12,9 +12,9 @@ const Index = (props) => {
     }
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
     const [isOpen, setIsOpen] = useState(false);
-    const [name, setName] = useState("");
-    const [phoneNumber, setPhoneNumber] = useState("");
-    const [sendResult, setSendResult] = useState(false);
+    const [name, setName] = useState(""); //Стейт для хранения имени
+    const [phoneNumber, setPhoneNumber] = useState(""); //Стейт для хранения телефона
+    const [sendResult, setSendResult] = useState(false); //Стейт для хранения значения об успешной отправке
     return (
         <>
             <div style={styleblock}>
@@ -38,6 +38,8 @@ const Index = (props) => {
                     <h3 className={clsx(style.formTitle)}>
                         Заказать звонок
                     </h3>
+
+                    {/*форма обратной связи*/}
                     <form>
                         <div className={clsx(style.formBlock)}>
                             <div className={clsx(style.inputBlock)}>
@@ -58,19 +60,13 @@ const Index = (props) => {
 
                             <button className={clsx(style.formButton)}
                                     onClick={(event) => {
-                                        if (setSendResult(sendBot(event, name, phoneNumber))) {
-                                            setSendResult(true)
-
+                                        if (setSendResult(sendBot(event, name, phoneNumber))) { //Передаем name и phoneNumber из стейта в API бота
+                                            setSendResult(true) //Если результат sendBot вернул true то устанавливаем setSendResult true, что бы отобразить надпись, что запрос успешно отправлен
                                         }
                                         setTimeout(() => {
                                             setIsOpen(false);
                                         }, 1000)
-                                        // (async () => {
-                                        //     // Задержка в 2 секунды перед выводом сообщения
-                                        //     await sleep(2000);
-                                        //     console.log('Проснулись! Больше ждать не нужно.');
-                                        // })();
-                                        // setIsOpen(false);
+                                        //Задержка 1 секунда формы, что бы пользователь прочел, что сообщение успешно отправлено, после чего она закрывается
                                     }}
                                     type="submit">Отправить
                             </button>
@@ -79,6 +75,7 @@ const Index = (props) => {
                             (
                                 <div className={clsx(style.formSendResult)}>Ваш запрос успешно отправлен</div>
                             )
+                            //Если setSendResult == true то отрисовывем эту надпись
                         }
 
                     </form>
