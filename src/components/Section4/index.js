@@ -158,29 +158,39 @@ const Index = () => {
                         }
                         {
                             promotions.map(promotionItem => {
-                                console.log(promotionItem);
                                 if (promotionItem.id === promotionId) {
-                                    console.log(promotionId)
                                     return (
-                                        promotionItem.details.map(detail => {
+                                        <div className={clsx(style.detailsBlock)}>
+                                            {promotionItem.details.map(detail => {
+                                                return (
+                                                    // Обертка товара
+                                                    <div className={clsx(style.detailsWrapper)}>
+                                                        <img src={detail.image} alt=""/>
+                                                        <div className={clsx(style.productBlock)}>
+                                                            {/*Заголовок товара*/}
+                                                            <h3 className={clsx(style.detailsTitle)}>{detail.title}</h3>
+                                                            <div>
+                                                                {Object.entries(detail.specifications).map(([key, value]) => {
+                                                                    return (
+                                                                        <div>
+                                                                            <span
+                                                                                className={clsx(style.key)}>{key}: </span>
+                                                                            <span
+                                                                                className={clsx(style.value)}>{value}</span>
+                                                                        </div>
 
-                                            console.log(Object.keys(detail.specifications))
-                                            console.log(Object.values(detail.specifications))
-                                            return (
-
-                                                Object.entries(detail.specifications).map(([key, value]) => {
-                                                    return (
-                                                        <div>
-                                                            <span>{key} : </span>
-                                                            <span>{value}</span>
+                                                                    )
+                                                                })}
+                                                            </div>
                                                         </div>
 
-                                                    )
-                                                })
 
-                                            )
+                                                    </div>
+                                                )
 
-                                        })
+                                            })
+                                            }
+                                        </div>
                                     )
                                 }
                             })

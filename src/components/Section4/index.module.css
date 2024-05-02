@@ -1,6 +1,7 @@
 .wrapperPromo {
     text-align: center;
     background: #D9D9D9;
+    color: #3C3C3C;
 }
 
 .imagePromo {
@@ -15,4 +16,38 @@
     font-size: 23px;
     margin: 0 auto 30px auto;
 
+}
+.detailsBlock {
+    padding: 0 25px 30px 25px;
+}
+
+.detailsWrapper {
+    margin: 0 0 30px 0;
+
+    display: grid;
+    grid-template-columns: 18.932038835% 1fr;
+    column-gap: 45px;
+}
+
+.productBlock {
+    text-align: left;
+
+}
+
+.detailsTitle {
+    margin: 0 0 ;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+}
+
+.key {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.value {
+    font-weight: 400;
+    font-size: 13px;
 }

@@ -8,20 +8,22 @@ export const promotions = [
         details: [
             {
                 id: 1,
-                title: "Товар №1",
+                title: "Collection first",
                 image: "./img/promotions/promodet1.jpg",
                 specifications: {
-                    "Country": "Russia",
-                    "Class": 2
+                    "Страна производитель": "Росиия",
+                    "Класс износостойкости:": 32,
+                    "Вид древесины":"Вид древесины:"
                 }
             },
             {
                 id: 2,
-                title: "Товар №2",
+                title: "Collection second",
                 image: "./img/promotions/promodet2.jpg",
                 specifications: {
-                    "Country": "Europe",
-                    "Class": 1
+                    "Страна производитель": "Росиия",
+                    "Класс износостойкости:": 32,
+                    "Вид древесины":"Вид древесины:"
                 }
             }
         ]
@@ -35,8 +37,23 @@ export const promotions = [
         details: [
             {
                 id: 1,
-                title: "Название товара",
-                specifications: "dfd"
+                title: "Collection first",
+                image: "./img/promotions/promodet1.jpg",
+                specifications: {
+                    "Страна производитель": "Росиия",
+                    "Класс износостойкости:": 32,
+                    "Вид древесины":"Вид древесины:"
+                }
+            },
+            {
+                id: 2,
+                title: "Collection second",
+                image: "./img/promotions/promodet2.jpg",
+                specifications: {
+                    "Страна производитель": "Росиия",
+                    "Класс износостойкости:": 32,
+                    "Вид древесины":"Вид древесины:"
+                }
             }
         ]
     }
