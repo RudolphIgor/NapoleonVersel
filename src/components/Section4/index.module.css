@@ -70,7 +70,6 @@
 
 @media (max-width: 450px) {
     .detailsWrapper {
-        /*column-gap: min(7.5vw, 20px);*/
         align-items: center;
         grid-template-columns: 20% 1fr;
     }
