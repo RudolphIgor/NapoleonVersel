@@ -8,18 +8,18 @@
     position: fixed;
     background-color: rgba(0, 0, 0, 0.88);
     display: flex;
-/*align-self: center;*/
+    align-items: center;
     justify-content: center;
     overflow: auto;
-    padding-bottom: 500px;
+    /*padding-bottom: 500px;*/
 
 }
 
 
 .modalContent {
     width: 672px;
-    position: relative;
-    top: 40%;
+    /*position: relative;*/
+    /*top: 40%;*/
     transition: transform 0.3s;
 }
 
