@@ -165,7 +165,7 @@ const Index = () => {
                                                 return (
                                                     // Обертка товара
                                                     <div className={clsx(style.detailsWrapper)}>
-                                                        <img src={detail.image} alt=""/>
+                                                        <img src={detail.image} className={clsx(style.imageProductPromo)} alt=""/>
                                                         <div className={clsx(style.productBlock)}>
                                                             {/*Заголовок товара*/}
                                                             <h3 className={clsx(style.detailsTitle)}>{detail.title}</h3>

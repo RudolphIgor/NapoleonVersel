@@ -1,3 +1,4 @@
+/*PROMO*/
 .wrapperPromo {
     text-align: center;
     background: #D9D9D9;
@@ -23,7 +24,6 @@
 
 .detailsWrapper {
     margin: 0 0 30px 0;
-
     display: grid;
     grid-template-columns: 18.932038835% 1fr;
     column-gap: 45px;
@@ -33,9 +33,10 @@
     text-align: left;
 
 }
-
+.imageProductPromo {
+    width: 100%;
+}
 .detailsTitle {
-    margin: 0 0 ;
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
@@ -50,4 +51,27 @@
 .value {
     font-weight: 400;
     font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    .detailsWrapper {
+        column-gap: min(7.5vw, 20px);
+        grid-template-columns: max(17vw ,117px) 1fr;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .detailsTitle {
+        margin: 0 0 min(2.5vw, 5px) 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .detailsWrapper {
+        /*column-gap: min(7.5vw, 20px);*/
+        align-items: center;
+        grid-template-columns: 20% 1fr;
+    }
 }

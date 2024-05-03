@@ -12,7 +12,7 @@ export const promotions = [
                 image: "./img/promotions/promodet1.jpg",
                 specifications: {
                     "Страна производитель": "Росиия",
-                    "Класс износостойкости:": 32,
+                    "Класс износостойкости": 32,
                     "Вид древесины":"Вид древесины:"
                 }
             },
@@ -22,7 +22,7 @@ export const promotions = [
                 image: "./img/promotions/promodet2.jpg",
                 specifications: {
                     "Страна производитель": "Росиия",
-                    "Класс износостойкости:": 32,
+                    "Класс износостойкости": 32,
                     "Вид древесины":"Вид древесины:"
                 }
             }
