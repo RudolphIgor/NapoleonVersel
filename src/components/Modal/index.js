@@ -8,6 +8,7 @@ import {Transition} from "react-transition-group";
 
 
 const Index = ({children, isOpen, onClose}) => {
+    isOpen ? document.querySelector('body').classList.add('lock') : document.querySelector('body').classList.remove('lock');
     return ReactDOM.createPortal(
         <>
             <Transition in={isOpen} timeout={

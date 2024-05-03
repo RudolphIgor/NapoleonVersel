@@ -68,6 +68,10 @@
 }
 
 /*Для формы отправки*/
+.wrapperForm {
+    padding: clamp(10px, 2.2vw, 20px);
+    background: #303030;
+}
 .formTitle {
     margin: 0 0 40px 0;
     font-size: 30px;
@@ -79,6 +83,7 @@
     text-align: center;
     margin: 0 auto ;
     width: 300px;
+    /*padding: clamp(10px, 2.2vw, 20px);*/
 }
 .formBlock {
     margin: 0 0 40px 0;
