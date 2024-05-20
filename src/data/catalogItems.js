@@ -6,22 +6,22 @@ export const catalogItems = [
     },
     {
         id: 2,
-        title: 'плитка пвх',
+        title: 'кварц виниловая плитка',
         image: "./img/catalog/plitkaPvh.jpg"
     },
     {
         id: 3,
-        title: 'плинтуса',
+        title: 'плинтус',
         image: "./img/catalog/plintus.jpg"
     },
     {
         id: 4,
-        title: 'рейка',
+        title: 'интерьер',
         image: "./img/catalog/reika.jpg"
     },
     {
         id: 5,
-        title: 'ковровые покрытия',
+        title: 'ковровое покрытие',
         image: "./img/catalog/kover.jpg"
     },
     {

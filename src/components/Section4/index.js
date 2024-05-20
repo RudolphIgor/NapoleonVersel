@@ -10,6 +10,7 @@ import style from "./index.module.css"
 import {register} from 'swiper/element/bundle'
 import {promotions} from "../../data/promotions";
 import Modal from "../Modal";
+import PromoDetails from "../PromoDetails";
 
 
 const Index = () => {
@@ -132,70 +133,16 @@ const Index = () => {
                                 )
                             })
                         }
-
-
                     </swiper-container>
                 </div>
                 <Modal
                     isOpen={isOpen} //передача состояния окна
                     onClose={() => setIsOpen(false)}
-                    className={clsx(style.modal)}
                 >
-                    <div className={clsx(style.wrapperPromo)}>
-                        {
-                            promotions.map(promotionItem => {
-                                if (promotionItem.id === promotionId) {
-                                    return (
-                                        <div>
-                                            <img src={promotionItem.image} className={clsx(style.imagePromo)} alt=""/>
-                                            <h2 className={clsx(style.titlePromo)}>
-                                                {promotionItem.title}
-                                            </h2>
-                                        </div>
-                                    )
-                                }
-                            })
-                        }
-                        {
-                            promotions.map(promotionItem => {
-                                if (promotionItem.id === promotionId) {
-                                    return (
-                                        <div className={clsx(style.detailsBlock)}>
-                                            {promotionItem.details.map(detail => {
-                                                return (
-                                                    // Обертка товара
-                                                    <div className={clsx(style.detailsWrapper)}>
-                                                        <img src={detail.image} className={clsx(style.imageProductPromo)} alt=""/>
-                                                        <div className={clsx(style.productBlock)}>
-                                                            {/*Заголовок товара*/}
-                                                            <h3 className={clsx(style.detailsTitle)}>{detail.title}</h3>
-                                                            <div>
-                                                                {Object.entries(detail.specifications).map(([key, value]) => {
-                                                                    return (
-                                                                        <div>
-                                                                            <span
-                                                                                className={clsx(style.key)}>{key}: </span>
-                                                                            <span
-                                                                                className={clsx(style.value)}>{value}</span>
-                                                                        </div>
-
-                                                                    )
-                                                                })}
-                                                            </div>
-                                                        </div>
-
-
-                                                    </div>
-                                                )
-
-                                            })
-                                            }
-                                        </div>
-                                    )
-                                }
-                            })
-                        }
-                    </div>
+                    <PromoDetails
+                        id={promotionId}
+                        promotionsArray={promotions}
+                    />
                 </Modal>
             </section>
         </>
