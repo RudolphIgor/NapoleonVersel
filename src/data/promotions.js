@@ -40,7 +40,7 @@ export const promotions = [
         title: "Акция кварц-винил от Crono Floor",
         offer: "СТОП цена 1099₽ за кВ.м",
         image: "./img/promotions/sps.jpg",
-        text: "Влагостойкий замковой SPS-ламинат  Дуб Колорадо. Акция действует на товар в наличии. Наличие уточняйте у менеджеров.",
+        text: "Влагостойкий замковой SPS-ламинат  Дуб Колорадо. Акция действует на товар в наличии.",
         details: [
             {
                 id: 1,
@@ -57,14 +57,14 @@ export const promotions = [
     },
     {
         id: 4,
-        title: "Акция ламинат 8мм",
+        title: "Акция ламинат 33 класса 8мм",
         offer: "СТОП цена 750р старая 997р.",
         image: "./img/promotions/promo4.jpg",
         text: "Ламинат Ютекс 33 класса, толщина 8мм,с фаской.",
         details: [
             {
                 id: 1,
-                title: "Наличие уточняйте у менеджеров",
+                title: "Ламинат Ютекс",
                 image: "./img/promotions/detailPromo4.jpg",
                 specifications: {
                     "Цвет":"Светло- серый оттенок",
