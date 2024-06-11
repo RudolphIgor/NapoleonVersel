@@ -9,7 +9,6 @@ const Index = (props) => {
   const styleblock = {
     background: `url(${props.slideArray.img}) center no-repeat`,
     height: "clamp(141px, 41.5vw, 498px)",
-    border: "1px solid red",
   };
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const [isOpen, setIsOpen] = useState(false);
