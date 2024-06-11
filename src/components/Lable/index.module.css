@@ -1,0 +1,62 @@
+.lable {
+    display: flex;
+    padding: 12px 10px 12px 24px;
+    right: 50%;
+    bottom: 28%;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    rotate: 15grad;
+    color: #e30016;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    align-items: center;
+    justify-content: right;
+    padding-right: 10px;
+    letter-spacing: 0.01rem;
+}
+
+.lable::before {
+    content: "";
+    background: #e30016;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+@media (max-width: 1200px) {
+    .lable {
+        font-size: clamp(12px, 1.6666666667vw, 20px);
+
+    }
+}
+
+@media (max-width: 700px) {
+    .lable {
+        right: 50%;
+        bottom: 20%;
+    }
+}
+
+@media (max-width: 600px) {
+    .lable {
+        right: 40%;
+        bottom: 20%;
+    }
+}
+@media (max-width: 500px) {
+    .lable {
+        right: 30%;
+        bottom: 20%;
+    }
+}
+@media (max-width: 440px) {
+    .lable {
+        right: 10%;
+        bottom: 20%;
+    }
+}

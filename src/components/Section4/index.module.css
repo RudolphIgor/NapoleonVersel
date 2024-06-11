@@ -1,76 +1,72 @@
 /*PROMO*/
 .wrapperPromo {
-    text-align: center;
-    background: #D9D9D9;
-    color: #3C3C3C;
+  text-align: center;
+  background: #d9d9d9;
+  color: #3c3c3c;
 }
 
 .imagePromo {
-    width: 100%;
-    margin: 0 0 20px 0;
+  width: 100%;
+  margin: 0 0 20px 0;
 }
 
 .titlePromo {
-    font-family: Ubuntu, "sans-serif";
-    font-weight: 700;
-    color: #1B1918;
-    font-size: 23px;
-    margin: 0 auto 30px auto;
-
+  font-family: Ubuntu, "sans-serif";
+  font-weight: 700;
+  color: #1b1918;
+  font-size: 23px;
+  margin: 0 auto 30px auto;
 }
 .detailsBlock {
-    padding: 0 25px 30px 25px;
+  padding: 0 25px 30px 25px;
 }
 
 .detailsWrapper {
-    margin: 0 0 30px 0;
-    display: grid;
-    grid-template-columns: 18.932038835% 1fr;
-    column-gap: 45px;
+  margin: 0 0 30px 0;
+  display: grid;
+  grid-template-columns: 18.932038835% 1fr;
+  column-gap: 45px;
 }
 
 .productBlock {
-    text-align: left;
-
+  text-align: left;
 }
 .imageProductPromo {
-    width: 100%;
+  width: 100%;
 }
 .detailsTitle {
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin: 0 0 15px 0;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
 }
 
 .key {
-    font-weight: 700;
-    font-size: 13px;
+  font-weight: 700;
+  font-size: 13px;
 }
 
 .value {
-    font-weight: 400;
-    font-size: 13px;
+  font-weight: 400;
+  font-size: 13px;
 }
 
 @media (max-width: 600px) {
-
-    .detailsWrapper {
-        column-gap: min(7.5vw, 20px);
-        grid-template-columns: max(17vw ,117px) 1fr;
-    }
-
+  .detailsWrapper {
+    column-gap: min(7.5vw, 20px);
+    grid-template-columns: max(17vw, 117px) 1fr;
+  }
 }
 
 @media (max-width: 500px) {
-    .detailsTitle {
-        margin: 0 0 min(2.5vw, 5px) 0;
-    }
+  .detailsTitle {
+    margin: 0 0 min(2.5vw, 5px) 0;
+  }
 }
 
 @media (max-width: 450px) {
-    .detailsWrapper {
-        align-items: center;
-        grid-template-columns: 20% 1fr;
-    }
+  .detailsWrapper {
+    align-items: center;
+    grid-template-columns: 20% 1fr;
+  }
 }
