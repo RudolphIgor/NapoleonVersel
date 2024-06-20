@@ -1,4 +1,6 @@
-
+.background {
+  background-size: 100%;
+}
 .wrapper:before {
   content: "";
   background: rgba(0, 0, 0, 0.2);
