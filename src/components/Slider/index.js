@@ -17,7 +17,7 @@ const Index = (props) => {
   const [sendResult, setSendResult] = useState(false); //Стейт для хранения значения об успешной отправке
   return (
     <>
-      <div style={styleblock}>
+      <div style={styleblock} className={clsx(style.background)}>
         <div className={style.content}>
           <p className={style.title}>{props.slideArray.text}</p>
           <p className={clsx(style.subtitle)}>{props.slideArray.subtitle}</p>

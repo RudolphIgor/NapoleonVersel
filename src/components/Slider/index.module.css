@@ -1,3 +1,4 @@
+
 .wrapper:before {
   content: "";
   background: rgba(0, 0, 0, 0.2);
@@ -76,6 +77,13 @@
   .button {
     padding: clamp(9px, 1.25vw, 15px) clamp(12px, 2.5vw, 30px);
     font-size: clamp(12px, 1.3333333333vw, 20px);
+  }
+}
+
+@media (max-width: 700px) {
+  .background {
+    /*height: 150% !important;*/
+    background-size: 160% !important;
   }
 }
 
