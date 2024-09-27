@@ -34,6 +34,6 @@
     align-content: center;
   }
   .menuMobile {
-    top: clamp(75px, 13.7096774194vw, 136px);
+    top: clamp(70px, 13.7096774194vw, 136px);
   }
 }
